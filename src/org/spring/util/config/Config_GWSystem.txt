@@ -1,0 +1,17 @@
+
+public class ... {
+
+  ...
+
+  public class GWSystem {
+    class Agents {
+      String _Comment;  // ="Агент API"
+      String Type;      // ="API"
+      String Directory; // ="data:/PostOffc/GrpWise/d_USICo/WPGATE/API/"
+    };
+    Agents[] Agents;
+  };
+
+  ...
+
+};

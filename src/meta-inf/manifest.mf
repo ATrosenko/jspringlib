@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+
+Name: Spring Software Java library
+Specification-Title: Utilities & Support Library
+Specification-Vendor: Andy Trotsenko, Spring SoftWare
+Specification-Version: 1.00d-002
+Implementation-Title: Utilities & Support Library
+Implementation-Vendor: Andy Trotsenko, Spring SoftWare
+Implementation-Version: 1.00d-002

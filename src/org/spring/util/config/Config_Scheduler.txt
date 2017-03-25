@@ -1,0 +1,21 @@
+# Scheduler parameters / CharSet=CP866 /
+
+public class Scheduler {
+
+  ...
+
+  public class SchedulerConfig {  // defines options for reading
+    integer Cycle;
+    public class Agents {
+      String Directory;
+      String Names;
+    };
+    public class Logging {
+      String Level;
+      String LogFile
+    };
+  };
+
+  ...
+
+};

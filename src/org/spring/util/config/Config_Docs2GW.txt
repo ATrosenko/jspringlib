@@ -1,0 +1,35 @@
+
+public class ... {
+
+  ...
+
+  public class Docs2GW {
+    Docs2GW { // Members initialisation };
+    string _Comment;                        // ="Экспорт файлов прикреплений из писем"
+    string Agent;                           // ="Агент API"
+    class Sender {
+      string _Comment;                      // ="* Технологический компьютер *"
+      string Name;                          // ="Робот"
+      string Address;                       // ="root.Главный оффис.УОСК"
+    };
+    Sender Sender;
+    class Receipient {
+      String _Comment;
+      boolean Status;                       // ="OFF"
+      String Name;                          // ="Администратор"
+      String Address;                       // ="root"
+      String Participation;                 // ="BCC"
+    };
+    Receipient Receipient;
+    String Subject;                         // ="%FILENAME% (новый)"
+    String Subject.Changed;                 // ="%FILENAME% (изменен %FILETIME%)"
+    String Message;                         // ="\nК письму прикреплен новый файл реестра."
+    String Message.Changed;                 // ="\nК письму прикреплен измененный файл реестра."
+    String Directory;                       // ="data:/Police96/_Docs/KI/Платежи/"
+    String FileNames;                       // ="*.*"
+    String FileNames.Exclude;               // ="*.*"
+  };
+
+  ...
+
+};

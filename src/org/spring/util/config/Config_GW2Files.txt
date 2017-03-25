@@ -1,0 +1,26 @@
+
+public class ... {
+
+  ...
+
+  public class GW2Files {
+    public GW2Files() {
+      AttachedFiles.DefaultsFirst = true;
+    };
+    string _Comment;                          // ="Экспорт файлов прикреплений из писем"
+    string Agent;                             // ="Агент API"
+    string Messages;                          // ="data:/PostOffc/Director/In/"
+    string User;                              // ="Системы.Экспорт.Лига-Закон"
+    class AttachedFiles {
+      string _Comment;                        // ="Файлы обновлений"
+//      string Names;                         // ="*.*;mime.822;text.htm;enclosure"
+      string[] Names;                         // =4;[1]=*.*;[2]=mime.822;[3]=text.htm;[4]=enclosure
+      string Action;                          // ="data:/PostOffc/Liga/"
+    };
+    AttachedFiles[] AttachedFiles;
+    AttachedFiles.DefaultsFirst;              // ="false"
+  };
+
+  ...
+
+};

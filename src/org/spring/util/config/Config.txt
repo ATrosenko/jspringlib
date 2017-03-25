@@ -1,0 +1,64 @@
+
+Object[] ParseConfig( String AppName, class ConfigStruct, boolean MultipleInstances )
+// let's try to pass ConfigStruct such as:
+// ParseConfig( "Scheduler", SchedConfig[] )
+returns Object[0] = Default or Single configuration set
+        Object[1..n] = Multiple configuration sets (if it's allowed)
+Note , that in config-file (properties object), all multi-instanced sets
+are also counted starting with 1 (not 0!).
+
+Class, declaring configuration structure:
+
+  class CLASS {
+
+    CLASS {
+      // Constructor (if present) makes all default initialisation
+    };
+
+    void _Validator() {
+      // (if present) makes all after-configuration read assumtions
+    };
+
+    // predefined field names:
+
+    string _Comment;                      // gets (if present) a key "APP.CLASS"
+                                          // value
+//    boolean _AllowMultipleConfigurations; // (if present) specifies that this 
+//                                          // configuration branch have multiple
+//    Not necessary.                        // instances (i.e. "APP.CLASS[3]...").
+//    Use arrays instead                    // Number of instances reads from
+//                                          // "APP.CLASS" key. In such case,
+//                                          // _Comment field presence ignored
+//                                          // (cause _Comment key conflicts with
+//                                          // this key meaning.
+
+    // common fields:
+
+    void _FieldName_Validator() {
+      // (if present) makes validation of a specified (in name) field
+    };
+
+    boolean BooleanField;                 // TRUE/FALSE,ON/OFF,ENABLE(D)/DISABLE(D),n/0
+    byte ByteField;                       // byte field
+    char CharField;                       // char field
+    short ShortField;                     // short field
+    int IntField;                         // int field
+    long LongField;                       // long value
+    float FloatField;                     // float value
+    double DoubleField;                   // double field
+    String StringField;                   // string field
+
+    PRIMITIVETYPE[] FieldName;            // "APP.FieldName[i]"
+                                          // i.e. ("String[] Files"):
+                                          // App.Files=3
+                                          // App.Files[1]=sys:/etc/CONSOLE.LOG
+                                          // App.Files[2]=sys:/system/ABEND.LOG
+                                          // App.Files[3]=sys:/VOL$ERR.LOG
+
+    CLASS FieldName;                      // Substructure with fieldname
+                                          // as the subkey (of i-th level) name
+
+    CLASS[] FieldName;                    // Substructure array with fieldname
+                                          // as the subkey (of i-th level) name
+
+  };
